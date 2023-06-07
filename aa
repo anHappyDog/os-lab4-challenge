@@ -1,0 +1,25 @@
+gxemul -T -C R3000 -M 64 -E testmips  target/mos
+GXemul 0.7.0+dfsg    Copyright (C) 2003-2021  Anders Gavare
+Read the source code and/or documentation for other Copyright messages.
+
+net: 
+    simulated network: 
+        10.0.0.0/8 (max outgoing: TCP=100, UDP=100)
+        gateway+nameserver: 10.0.0.254 (60:50:40:30:20:10)
+        nameserver uses real nameserver 202.112.128.51
+machine: 
+    model: MIPS test machine
+    cpu: R3000 (32-bit, I+D = 4+4 KB, L2 = 0 KB)
+    memory: 64 MB
+    file: loading target/mos
+    cpu0: starting at 0x80011920 <_start>
+-------------------------------------------------------------------------------
+
+init.c:	mips_init() is called
+Memory size: 65536 KiB, number of pages: 16384
+to memory 80430000 for struct Pages.
+pmap.c:	 mips vm init success
+handling sigaction 00000002...
+29 is 7f3fdf70
+tf is 803fff68
+ tf->cp0_epc is 00401724
